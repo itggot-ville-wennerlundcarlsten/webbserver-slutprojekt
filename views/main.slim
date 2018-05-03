@@ -1,0 +1,44 @@
+- if session == nil
+    h3 du verkar inte vara inloggad
+    a href="/log_in"
+        button logga in
+    a href="/register"
+        button registrera dig
+- else
+    p Goddag #{name[0][0]}
+    a href="/log_out"
+        button logga ut
+div class="produktblock"    
+    article class="datorblock"
+        h2 Datorer
+        div class="datorer"
+            form action="/add" method="post"
+                img src="/img/lenovo-320s.jpg"
+                label for="produkt" Produkt:
+                input name="produkt" value="lenovo-320s" readonly="readonly"
+                -if session != nil
+                    button Lägg till i varukorg
+            form action="/add" method="post"
+                img src="/img/lenovo-720s.jpg"
+                label for="produkt" Produkt:
+                input name="produkt" value="lenovo-720s" readonly="readonly"
+                -if session != nil
+                    button Lägg till i varukorg
+            form action="/add" method="post"
+                img src="/img/acer-aspire1.jpg"
+                label for="produkt" Produkt:
+                input name="produkt" value="acer-aspire1" readonly="readonly"
+                -if session != nil
+                    button Lägg till i varukorg
+            form action="/add" method="post"
+                img src="/img/acer-p2510-m.jpg"
+                label for="produkt" Produkt:
+                input name="produkt" value="acer-p2510-m" readonly="readonly"
+                -if session != nil
+                    button Lägg till i varukorg
+            form action="/add" method="post"
+                img src="/img/huawei-x13.jpg"
+                label for="produkt" Produkt:
+                input name="produkt" value="huawei-x13" readonly="readonly"
+                -if session != nil
+                    button Lägg till i varukorg

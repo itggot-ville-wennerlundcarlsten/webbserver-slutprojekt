@@ -1,0 +1,31 @@
+h1 Konto
+
+article class="accountbalance"
+    h2 Kontobalans för #{name}
+    p du har #{kr}kr på ditt konto
+    form action="/add_money" method="post"
+        input type="number" name="amount" placeholder="antal kronor"
+        button Lägg till pengar på ditt konto
+
+article class="shoppingcart"
+    h2 Shoppingkorg
+    ul
+    - item.each_with_index do |item, i|
+        div class="item"
+            li #{item} #{cost[i]}kr
+            form action="/remove_item" method="post"
+                input type="hidden" name="item" value="#{item}"
+                button X
+    p summa:#{sum}
+    form action="/buy" method="post"
+        input type="hidden" name="sum" value="#{sum}"
+        button
+            h3 Köp produkter
+    h2 Orders
+    ul
+    - orders.each do |order|
+        li 
+            form action="/order" method="post"
+                input type="hidden" name="order" value="#{order}"
+                button Radera order genom att trycka här order: #{order} (Inga pengar tillbaka)
+

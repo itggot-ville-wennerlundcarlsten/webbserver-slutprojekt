@@ -1,0 +1,22 @@
+body{
+    background-color: hotpink;
+    font-family: sans-serif;
+}
+.datorer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.datorer form{
+    display: flex;
+    flex-direction: column;
+}
+.datorer img{
+    width: 200px;
+    height: 200px;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+}
+
